@@ -1,0 +1,18 @@
+Package: StatComp20095
+Type: Package
+Title: Three functions for StatComp
+Version: 1.0
+Date: 2020-12-13
+Author: Si Chen
+Maintainer: Si Chen <sc20171@mail.ustc.edu.cn>
+Description: The package is a collection of three functions.
+License: GPL (>= 2)
+Imports: Rcpp, microbenchmark,knitr, scales, MASS, mvtnorm,nloptr,xtable,bootstrap,boot,DAAG,RANN,energy,Ball,devtools,roxygen2,stats,mixtools
+LinkingTo: Rcpp
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: knitr
+Suggests: rmarkdown
+RoxygenNote: 7.1.1
+URL: http://github.com/zjsichen/StatComp20095
+BugReports: http://github.com/zjsichen/StatComp20095/issues
