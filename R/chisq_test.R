@@ -32,3 +32,6 @@ chisq_test <- function(x){
   p_value <- dchisq(chi_sqr, df = df)
   (test <- list(chi_sqr = chi_sqr, df = df, p_value = p_value))
 }
+
+
+

@@ -558,7 +558,7 @@ $d(d +1)(d +2)/6$ degrees of freedom.
 
 ## Answer 6.C
 ```{r}
-B_1d<- function(x,d) {
+B_1d<- function(x) {
   #computes the sample skewness coeff. 
   xbar <- apply(x,2,mean)
   n=length(x[,1])
@@ -589,7 +589,7 @@ for (i in 1:length(n)) {
 #test decisions
   p.reject[i]<- mean(replicate(m, expr={ 
   x <- mvrnorm(n[i],mu,sigma) 
-  as.integer(n[i]*B_1d(x,d)/6 >= cv )
+  as.integer(n[i]*B_1d(x)/6 >= cv )
   }))
 }
 p.reject=matrix(p.reject,nrow = 1)
@@ -632,7 +632,7 @@ for (j in 1:N) {
     for (k in 1:n){
       x[k,]=mvrnorm(1,mu,Sigma[,,k])
     }
-    sktests[i] <- as.integer(n*B_1d(x,d)/6>= cv)
+    sktests[i] <- as.integer(n*B_1d(x)/6>= cv)
   
   }
   pwr[j] <- mean(sktests) 
